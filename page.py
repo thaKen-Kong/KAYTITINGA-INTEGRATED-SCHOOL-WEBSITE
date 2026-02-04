@@ -31,3 +31,18 @@ async def request_role(request: Request):
 @app.get("/request-role")
 async def request_role(request: Request):
     return templates.TemplateResponse("login.html", {"request": request, "title" : "Login - KIS"})
+@app.get("/news")
+async def news(request: Request):
+    return templates.TemplateResponse("contents/events-news/news.html", {"request": request, "title": "News - KIS"})
+
+@app.get("/events")
+async def events(request: Request):
+    return templates.TemplateResponse("contents/events-news/events.html", {"request": request, "title": "Events - KIS"})
+
+@app.get("/admin")
+async def admin(request: Request):
+    return templates.TemplateResponse("admin.html", {"request": request, "title": "Administration - KIS"})
+
+@app.get("/contact")
+async def contact(request: Request):
+    return templates.TemplateResponse("contact.html", {"request": request, "title": "Contact - KIS"})

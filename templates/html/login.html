@@ -4,20 +4,52 @@
 {% endblock %}
 
 {% block content %}
-    <section id ="login_container">
-        <div class="login-box">
-            <h2>Login</h2>
-            <form method="POST" action="/login">
-                <div class="user-box">
-                    <input type="text" name="username" required="">
-                    <label>Username</label>
-                </div>
-                <div class="user-box">
-                    <input type="password" name="password" required="">
-                    <label>Password</label>
-                </div>
-                <button type="submit" class="btn-login">Submit</button>
-            </form>
+    <section id="login-container">
+        <div class="info-container left">
+            <h3>Welcome Back</h3>
+            <p>Login to access the admin panel and manage website content.</p>
+        </div>
+        <div class="auth-container">
+            <div class="login-box" id="login-form">
+                <h2>Admin Login</h2>
+                <p>Please enter your credentials to access the website editor.</p>
+                <form method="POST" action="/login">
+                    <div class="user-box">
+                        <input type="text" name="username" required="">
+                        <label>Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="password" required="">
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" class="btn-login">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+            </div>
+            <div class="login-box" id="signup-form" style="display: none;">
+                <h2>Admin Sign Up</h2>
+                <p>Create an account to get started.</p>
+                <form method="POST" action="/signup">
+                    <div class="user-box">
+                        <input type="text" name="username" required="">
+                        <label>Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="email" name="email" required="">
+                        <label>Email</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="password" required="">
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" class="btn-login">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+            </div>
+        </div>
+        <div class="info-container right">
+            <h3>Secure Access</h3>
+            <p>Authorized personnel only. Edit and update school information.</p>
         </div>
     </section>
-{%endblock %}
+{% endblock %}

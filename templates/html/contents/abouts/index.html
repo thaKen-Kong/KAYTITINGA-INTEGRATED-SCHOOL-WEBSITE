@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-title">
+                
+            </div>
+            <div class="hero-content">
+                <h1>KAYITINGA INTEGRATED SCHOOL</h1>
+                <p>Kaytitinga Integrated School is committed to providing quality education and fostering holistic development in students. Our dedicated faculty and staff work tirelessly to create a nurturing environment where every student can thrive academically, socially, and emotionally.</p>
+                <input type="button" value="Learn More" onclick="window.location.href='#about'" class="btn">
+            </div>
+        </section>
+        <!-- Latest News Section -->
+        <section id="latest_news">
+            <h2>LATEST NEWS</h2>
+            <div class="news-container">
+                <div class="news-item">
+                    <img src="" alt="News 1" width="300" height="200">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <div class="news-item">
+                    <img src="/static/images/news/news2.jpg" alt="News 2" width="300" height="200">
+                    <h3>-----</h3>
+                    <p>-----</p>
+                </div>
+                <div class="news-item">
+                    <img src="/static/images/news/news3.jpg" alt="News 3" width="300" height="200">
+                    <h3>----</h3>
+                    <p>------</p>
+                </div>
+            </div>
+            <input type="button" value="View All News" onclick="window.location.href='#news'" class="btn">
+        </section>
+        <section id="event">
+            <h2>EVENTS</h2>
+            <div class="event-container">
+                <div class="event-item">
+                    <img src="/static/images/events/event1.jpg" alt="Event 1" width="300" height="200">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <div class="event-item">
+                    <img src="/static/images/events/event2.jpg" alt="Event 2" width="300" height="200">
+                    <h3></h3>
+                    <p></p>
+                </div>
+        </section>
+{% endblock %}

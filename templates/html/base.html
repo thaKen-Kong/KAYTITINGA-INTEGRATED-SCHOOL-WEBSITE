@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>{% block title %}KIS - Kaytitinga Integrated School{% endblock %}</title>
+</head>
+<body>
+   <!-- Header Section -->
+   <header>
+        <div class="logo-section">
+            <img src="/static/images/logo/KIS-LOGO.png" alt="KIS Logo" id="logo-img" width="80" height="80">
+            <h1 id="logo"><a href="/">KIS</a></h1>
+        </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="hamburger">☰</label>
+            <nav>
+                <ul>
+                    <li><a href="#" id="nav">About</a>
+                        <ul class="about_drop_down">
+                            <li><a href="/about">About KIS</a></li>
+                            <li><a href="/history">History</a></li>
+                            <li><a href="/mission-vision">Mission and Vision</a></li>
+                            <li><a href="/core-values">Core Values</a></li>
+                        </ul>   
+                    </li>
+                    <li><a href="#" id="nav">Life@KIS</a>
+                        <ul class="life_kis_drop_down">
+                            <li><a href="#kis-hymn">Kaytitinga Hymn</a></li>
+                            <li><a href="#faculty">Faculty</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#admin" id="nav">Administration</a></li>
+                    <li><a href="#Events-and-News" id="nav">Events and News</a></li>
+                    <li><a href="#contact" id="nav">Contact</a></li>
+                </ul>
+            </nav>
+   </header>
+   <main>
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+    <!-- Footer Section -->
+    <footer>
+
+        <section id="main-footer">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="/static/images/logo/KIS-LOGO.png" alt="KIS Logo" id="logo-img" width="50" height="50">
+                    <h1 id="logo-footer"><a href="/">Kaytitinga Integrated School</a></h1>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/about">About Us</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+            </div>
+           
+            <div class="social-media">
+                <a href="#"><img src="/static/images/icons/facebook.png" alt="Facebook" width="30" height="30"></a>
+                <a href="#"><img src="/static/images/icons/instagram.png" alt="Instagram" width="30" height="30"></a>
+            </div>
+
+        </section>
+        <div class="request-role">
+            <a href="/request-role"><img src="/static/images/icons/setting.png" alt="Request Role" width="50" height="50"></a>
+        </div>
+        <div id="copyright-claim-footer">
+            <p>&copy; 2026 Kaytitinga Integrated School. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" title="Back to Top">↑</button>
+    <script src="/static/script.js"></script>
+</body>
+</html>
